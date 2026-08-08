@@ -19,8 +19,8 @@ class OrderService:
     ) -> dict:
         """Directs the order request to the appropriate Binance Client method."""
         logger.info(
-            f"Processing {order_type.value} order request for {symbol}: "
-            f"Side={side.value}, Quantity={quantity}, Price={price}, StopPrice={stop_price}"
+            f"Processing value {order_type.value} order request for {symbol}: "
+            f"Sides ={side.value}, Quantity={quantity}, Price={price}, StopPrice={stop_price}"
         )
         
         if order_type == OrderType.MARKET:
