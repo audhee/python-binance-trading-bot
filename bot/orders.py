@@ -47,5 +47,5 @@ class OrderService:
         else:
             raise ValueError(f"Unsupported order type: {order_type}")
             
-        logger.info(f"Order executed successfully on Testnet. Order ID: {raw_response.get('orderId')}")
+        logger.info(f"Orders executed are successfully on the Testnet. Order ID: {raw_response.get('orderId')}")
         return raw_response
