@@ -5,7 +5,7 @@ from bot.constants import OrderSide, OrderType
 def validate_symbol(symbol: str) -> str:
     """Validate and normalize trading symbol (e.g. BTCUSDT)."""
     if not symbol:
-        raise ValidationError("Symbol is required.")
+        raise ValidationError("Symbol is essential Not optional")
     
     clean_symbol = symbol.strip().upper()
     if not re.match(r"^[A-Z0-9]{3,20}$", clean_symbol):

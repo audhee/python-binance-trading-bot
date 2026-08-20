@@ -29,9 +29,9 @@ class BinanceFuturesClient:
             server_time = response.json()["serverTime"]
             local_time = int(time.time() * 1000)
             self.time_offset = server_time - local_time
-            logger.info(f"Time synced and are Offset: {self.time_offset}ms (Server time: {server_time})")
+            logger.info(f"Time synced and are Offset is: {self.time_offset}ms (Server time: {server_time})")
         except requests.RequestException as e:
-            logger.warning(f"Could not synchronize server time (using local clock)s. Error: {e}")
+            logger.warning(f"Could not be able to synchronize server time (using local clock)s. Error: {e}")
             self.time_offset = 0
             
     def _get_timestamp(self) -> int:
