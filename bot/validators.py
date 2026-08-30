@@ -13,7 +13,7 @@ def validate_symbol(symbol: str) -> str:
             f"Invalid symbol: '{symbol}'. Using the uppercase alphanumeric strings like BTCUSDT or ETHUSDT."
         )
     return clean_symbol
-
+# Its for the orders 
 def validate_side(side: str) -> OrderSide:
     """Validate and normalize order side (BUY/SELL)."""
     if not side:
