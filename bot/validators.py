@@ -10,7 +10,7 @@ def validate_symbol(symbol: str) -> str:
     clean_symbol = symbol.strip().upper()
     if not re.match(r"^[A-Z0-9]{3,20}$", clean_symbol):
         raise ValidationError(
-            f"Invalid symbol: '{symbol}'. Use the uppercase alphanumeric strings like BTCUSDT or ETHUSDT."
+            f"Invalid symbol: '{symbol}'. Using the uppercase alphanumeric strings like BTCUSDT or ETHUSDT."
         )
     return clean_symbol
 
