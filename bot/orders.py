@@ -19,7 +19,7 @@ class OrderService:
     ) -> dict:
         """Directs the order request to the appropriate Binance Client method."""
         logger.info(
-            f"Processing value {order_type.value} order request for {symbol}: "
+            f" {order_type.value} order request for {symbol}: "
             f"Sides ={side.value}, Quantity={quantity}, Price={price}, StopPrice={stop_price}"
         )
         
@@ -47,5 +47,5 @@ class OrderService:
         else:
             raise ValueError(f"Unsupported order type: {order_type}")
             
-        logger.info(f"Orders executed are successfully on the Testnet. Order ID: {raw_response.get('orderId')}")
+        logger.info(f"Orders are executed  {raw_response.get('orderId')}")
         return raw_response
