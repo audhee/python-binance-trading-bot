@@ -17,8 +17,8 @@ def validate_symbol(symbol: str) -> str:
 def validate_side(side: str) -> OrderSide:
     """Validate and normalize order side (BUY/SELL)."""
     if not side:
-        raise ValidationError("Order side is required.")
-    
+        raise ValidationError("Order side is must.")
+    # Documented for the validation
     clean_side = side.strip().upper()
     try:
         return OrderSide(clean_side)
@@ -52,7 +52,7 @@ def validate_quantity(quantity: float) -> float:
     try:
         val = float(quantity)
     except (ValueError, TypeError):
-        raise ValidationError(f"Quantity must be a numeric value. Got '{quantity}'.")
+        raise ValidationError(f"Quantity should be a numeric value. Got '{quantity}'.")
     
     if val <= 0:
         raise ValidationError(f"Quantity must be greater than zero. Got: {val}")
@@ -66,9 +66,9 @@ def validate_price(price: float, order_type: OrderType) -> float:
         try:
             val = float(price)
         except (ValueError, TypeError):
-            raise ValidationError(f"Price must be a numeric value. Got '{price}'.")
+            raise ValidationError(f"Price should be a numeric value. Got '{price}'.")
         if val <= 0:
-            raise ValidationError(f"Price must be greater than zero. Got: {val}")
+            raise ValidationError(f"Price should be greater than zero. Got: {val}")
         return val
     return None
 
