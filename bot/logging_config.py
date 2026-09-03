@@ -29,7 +29,8 @@ formatter = logging.Formatter(
 file_handler = RotatingFileHandler(log_file, maxBytes=5*1024*1024, backupCount=5, encoding="utf-8")
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
-
+# Console Handler
+console_handler = logging.StreamHandler()
 def redact_sensitive(data):
     """Recursively search and redact sensitive fields in dictionaries or strings."""
     if isinstance(data, dict):
