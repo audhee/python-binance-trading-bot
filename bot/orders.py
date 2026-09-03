@@ -45,7 +45,7 @@ class OrderService:
                 stop_price=stop_price
             )
         else:
-            raise ValueError(f"Unsupported order type: {order_type}")
+            raise ValueError(f"order type Not supported: {order_type}")
             
-        logger.info(f"Orders are executed  {raw_response.get('orderId')}")
+        logger.info(f"Orders will be executed  {raw_response.get('orderId')}")
         return raw_response
