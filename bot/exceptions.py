@@ -22,3 +22,4 @@ class OrderPlacementError(TradingBotException):
         self.message = message
         self.status_code = status_code
         super().__init__(f"Binance API Error Code :  (Code: {code}): {message}")
+"""Improved Documentation for OrderPlacementError class to include status_code parameter in the error message."""
