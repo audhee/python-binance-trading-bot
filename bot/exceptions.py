@@ -4,7 +4,6 @@ class TradingBotException(Exception):
 
 class ValidationError(TradingBotException):
     """Raised when validation of input parameters fails."""
-    """ Added the documentation """
     pass
 
 class ConfigurationError(TradingBotException):
