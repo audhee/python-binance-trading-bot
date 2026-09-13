@@ -8,7 +8,7 @@ load_dotenv()
 class Config:
     def __init__(self):
         self.api_key = os.getenv("BINANCE_API_KEY")
-        self.secret_key = os.getenv("BINANCE_SECRET_KEY") or os.getenv("BINANCE_API_SECRET")
+        self.secret_key = os.getenv("BINANCE_SECRET_API_KEY") or os.getenv("BINANCE_API_SECRET")
         self.base_url = os.getenv("BASE_URL", "https://testnet.binancefuture.com")
         
     def validate(self):
