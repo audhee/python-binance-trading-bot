@@ -14,7 +14,7 @@ class Config:
     def validate(self):
         if not self.api_key or not self.api_key.strip():
             raise ConfigurationError(
-                "BINANCE_API_KEY is not configured. Please define it in your .env file or environment variables."
+                "BINANCE_API_KEY Please define it in your .env file or environment variables."
             )
         if not self.secret_key or not self.secret_key.strip():
             raise ConfigurationError(
